@@ -1,0 +1,102 @@
+html {
+	font-size: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: white;
+  	--golden: #BC9548; 	
+	--white: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: horizontal;
+	align-items: center;
+}
+
+img {	  
+	/* Background image is centered vertically and horizontally at all times */
+	background-position: center center;
+	  
+	/* Background image doesn't tile */
+	background-repeat: no-repeat;
+	  
+	/* Background image is fixed in the viewport so that it doesn't move when 
+	the content's height is greater than the image's height */
+	background-attachment: fixed;
+	  
+	/* This is what makes the background image rescale based
+	on the container's size */
+	background-size: 1280px 780px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+
+form, button, .btn{
+	margin-top: -220px;
+	position: relative;	
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	font-size: 1.4rem;
+	color: var(--golden);
+	letter-spacing: 1.1rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	user-select: none;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: 600ms cubic-bezier(0.77, 0, 0.175, 1);
+	/*z-index: -1;
+	Removed, but need's to be explined :) */
+}
+
+.btn:hover {
+	color: var(--golden);
+	transition: 600ms cubic-bezier(0.77, 0, 0.175, 1);
+	transition-delay: .6s;
+}
+
+.btn:hover:before {
+	transition-delay: 0.2s;
+}
+
+.btn:hover:after {
+	transition-delay: .6s;
+}
+
+/* Discover */
+
+.lp:before {
+	top: 0%;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--golden);
+	border-left: 0;
+	border-right: 0;
+}
+
+.lp:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.lp:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.lp:hover:after {
+	top: 0;
+	height: 100%;
+}
